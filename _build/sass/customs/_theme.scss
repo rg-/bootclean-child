@@ -1,0 +1,122 @@
+html,body {
+	height:100%; 
+}
+ 
+
+.content-wrap{ 
+	img{
+		max-width:100%;
+		height:auto;
+	}
+}
+
+/*
+
+  data-toggle="collapse-custom"
+
+  required js, see $.fn.collapseCustom
+
+*/
+
+$collapse-custom-collapse: sm;
+$collapse-custom-width:300px;
+$collapse-custom-color:$primary;
+$collapse-custom-background:$light;
+$collapse-custom-wrapper-padding: $grid-gutter*2;
+$collapse-custom-transition:.5s all ease;
+$collapse-custom-animate-transition:.3s all ease .13s;
+$collapse-custom-box-shadow: $box-shadow;
+$collapse-custom-overlay-background: rgba($primary,.13);
+.collapse-custom{ 
+    position: fixed;
+    top: 0; 
+    max-width: 100%;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1040; 
+    display: flex;
+    justify-content: space-between;
+    width: $collapse-custom-width;
+    color:$collapse-custom-color;
+    background-color: $collapse-custom-background;
+    
+    .collapse-custom-wrapper{
+      padding:$collapse-custom-wrapper-padding;
+    }
+    .collapse-custom-action{
+    	[data-toggle]{ 
+    	}
+    }
+    .collapse-custom-animate{
+    	position:relative;
+    	right:-100px;
+    	@include transition($collapse-custom-animate-transition); 
+    } 
+
+    right:-($collapse-custom-width);
+    @include WPBC-box-shadow(none); 
+    @include transition($collapse-custom-animate-transition); 
+    &.opened{
+      right: 0; 
+      @include transition($collapse-custom-transition); 
+      @include WPBC-box-shadow($collapse-custom-box-shadow);
+      .collapse-custom-animate{
+          right:0;
+          @include transition($collapse-custom-transition);
+      } 
+    } 
+  
+}
+
+/* Best way is to use inside navbar like */ 
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .navbar-expand#{$infix}{
+       .collapse-custom{
+        display: flex;
+        width: auto; 
+        position: relative;
+        top: inherit;
+        right: inherit; 
+        max-width: 100%;
+        bottom: inherit;
+        overflow-y: hidden; 
+        color: inherit;
+        background-color: inherit;
+        @include WPBC-box-shadow(none); 
+        @include transition(none); 
+        .collapse-custom-animate{
+          right: inherit;
+          @include transition(none); 
+        }
+        .collapse-custom-wrapper{
+          padding:inherit;
+        }
+        &.opened{
+          right: inherit;
+          @include transition(none); 
+          .collapse-custom-animate{
+            right: inherit;
+            @include transition(none); 
+          }
+        }
+      }
+    } 
+  }
+}
+
+
+.collapse-custom-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    z-index: 1039;
+    background-color: $collapse-custom-overlay-background;
+    display: none;
+    &.opened{
+        display: block;
+    }
+}
