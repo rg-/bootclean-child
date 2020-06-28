@@ -48,10 +48,10 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	//$args['wp_nav_menu']['before_menu'] = '[WPBC_get_template name="parts/something"]'; 
 
 	/* wp_nav_menu */
-	$args['wp_nav_menu'] = ''; // use this to replace wp_nav_menu with "collapse-custom" one
-	$args['wp_nav_menu_custom'] = '[WPBC_get_template name="parts/wp_nav_menu_custom"]';
-	$args['navbar_toggler']['data_toggle'] = 'data-toggle="collapse-custom"';
-	$args['navbar_toggler']['target'] = 'collapse-custom';
+	//$args['wp_nav_menu'] = ''; // use this to replace wp_nav_menu with "collapse-custom" one
+	//$args['wp_nav_menu_custom'] = '[WPBC_get_template name="parts/wp_nav_menu_custom"]';
+	//$args['navbar_toggler']['data_toggle'] = 'data-toggle="collapse-custom"';
+	//$args['navbar_toggler']['target'] = 'collapse-custom';
 
 	return $args;
 });  

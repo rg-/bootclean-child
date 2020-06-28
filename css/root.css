@@ -58,8 +58,8 @@ $nav-link-padding-y:
 $nav-link-padding-x:
 */
 :root {
-  --primary: #151719;
-  --secondary: #6c757d;
+  --primary: #0B486B;
+  --secondary: #6610f2;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -75,8 +75,8 @@ $nav-link-padding-x:
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 :root_colors {
-  --primary: #151719;
-  --secondary: #6c757d;
+  --primary: #0B486B;
+  --secondary: #6610f2;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
