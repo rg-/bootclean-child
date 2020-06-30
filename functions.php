@@ -15,12 +15,11 @@ include('functions/theme-widgets.php');
 
 /* core */
 include('functions/core-theme_support.php');
+include('functions/core-private_areas.php');
 
-/* front-end layout */
-
-// apply_filters('wpbc/filter/layout/start/defaults', $args); 
+/* front-end layout */ 
 include('functions/layout.php');
 include('functions/layout-navmenus.php');
 
 /* plugins */
-include('functions/plugins-woocommerce.php'); 
+include('functions/plugins-woocommerce.php');   

@@ -20,6 +20,9 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	$logo = '[WPBC_get_stylesheet_directory_uri]/images/theme/bootclean-logo-color-@2.png';
 	$args['navbar_brand']['title'] = '<img width="220" src="'.$logo.'" alt="Bootclean" data-affix-addclass=""/>';
 
+	// or just site name
+	$args['navbar_brand']['title'] = '<span class="h2">'.get_bloginfo('name').'</span>';
+
 	$args['navbar_toggler']['class'] = 'toggler-primary toggler-open-primary';
 	$args['navbar_toggler']['type'] = 'animate';
 	$args['navbar_toggler']['effect'] = 'close-arrow'; 

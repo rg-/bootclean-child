@@ -30,6 +30,10 @@ function child_WPBC_widgets_init(){
 		$before_widget = '<div class="widget-box gmb-3 [VAL]">';
 		return $before_widget;
 	},10,1); 
+	add_filter('wpbc/filter/widgets/custom_fields/before_title', function($before_title){
+		$before_title = '<h4 class="section-title gmb-1 gpb-1 border-bottom [VAL]">';
+		return $before_title;
+	});
 
 	// Set defaults widgets areas if...
 	add_filter('wpbc/filter/layout/secondary-content/defaults_widgets', function($defaults_widgets, $name){
