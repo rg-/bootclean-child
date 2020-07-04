@@ -9,10 +9,10 @@
 add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
  
 	
-	$args['class'] = 'navbar navbar-expand-aside collapse-left navbar-expand-lg';
-	 
+	$args['class'] = 'navbar navbar-expand-aside collapse-left navbar-expand-lg'; 
+	$args['nav_attrs'] = ' data-affix-removeclass="" data-affix-addclass="bg-white shadow" ';
+
 	$args['container_class'] = 'container gpx-2 gpx-md-1';
-	$args['container_attrs'] = '';
 
 	$args['navbar_brand']['class'] = 'gpy-2';
 	$args['navbar_brand']['attrs'] = ' data-affix-removeclass="" data-affix-addclass="" ';  
@@ -21,7 +21,7 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	$args['navbar_brand']['title'] = '<img width="220" src="'.$logo.'" alt="Bootclean" data-affix-addclass=""/>';
 
 	// or just site name
-	$args['navbar_brand']['title'] = '<span class="h2">'.get_bloginfo('name').'</span>';
+	$args['navbar_brand']['title'] = '<span class="h2">WPBC Woo<span class="d-none d-sm-inline-block">commerce</span></span>';
 
 	$args['navbar_toggler']['class'] = 'toggler-primary toggler-open-primary';
 	$args['navbar_toggler']['type'] = 'animate';
@@ -32,8 +32,13 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	$args['wp_nav_menu']['menu_class'] = 'navbar-nav nav'; 
 	
 	$simulate_target = '#main-content';
-	$affix = false;
-	$simulate = false; 
+	$affix = true;
+	$simulate = true; 
+
+	global $post;
+	if(WPBC_if_has_page_header($post->ID)){
+		$simulate = false; 
+	}
 
 	$args['affix'] = $affix;
 	
@@ -41,6 +46,7 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	$args['affix_defaults']['simulate_target'] = $simulate_target;
 	$args['affix_defaults']['breakpoint'] = 'xs';
 	$args['affix_defaults']['scrollify'] = false;  
+  
 
 	// $args['nav_attrs'] = ' data-affix-target="#main-content-wrap" '; 
 
@@ -57,12 +63,7 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	//$args['navbar_toggler']['target'] = 'collapse-custom';
 
 	return $args;
-});  
-
-add_action('wpbc/layout/start', function(){
-	?> 
-	<?php
-}, 11 );
+},10,1);  
 
 /*
 	Alter output html for menus

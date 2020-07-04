@@ -38,7 +38,7 @@ function child_WPBC_widgets_init(){
 	// Set defaults widgets areas if...
 	add_filter('wpbc/filter/layout/secondary-content/defaults_widgets', function($defaults_widgets, $name){
 		if($name=='area-1'){
-			//$defaults_widgets[] = 'widget_area_1';
+			$defaults_widgets[] = 'widget_area_1';
 		}
 		if($name=='area-2'){
 			//$defaults_widgets[] = 'widget_area_2';
