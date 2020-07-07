@@ -16,7 +16,7 @@ add_filter('WPBC_options_show_menu',function(){
 
 */
 add_filter('WPBC_layout_debug',function(){
-	return false; // true default
+	return true; // true default
 }, 10, 1);
 
 /*

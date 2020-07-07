@@ -4530,6 +4530,14 @@ a.breadcrumb-dark a:hover, a.breadcrumb-dark a:focus {
 .custom-radio.custom-control-inverse.custom-control-dark .custom-control-input:checked ~ .custom-control-label::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23343a40'/%3e%3c/svg%3e"); }
 
+.m-icon-svg {
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 24px;
+  height: 24px;
+  display: inline-block; }
+
 .custom-control .custom-control-label,
 .custom-switch .custom-control-label,
 .m-radio .custom-control-label,

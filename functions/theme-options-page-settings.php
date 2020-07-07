@@ -1,9 +1,13 @@
 <?php
-
 /*
+
 	Remove tabs and fields from Page Settings Group
+
 */
-add_filter('WPBC_group_builder__layout', function($fields){
+
+// add_filter('WPBC_group_builder__layout', 'WPBC_group_builder__layout_custom',9999,1);  
+
+function WPBC_group_builder__layout_custom($fields){
 	
 	$remove = array(
 		'field_layout_main_navbar_template__tab',
@@ -27,7 +31,7 @@ add_filter('WPBC_group_builder__layout', function($fields){
 	
 	return $fields; 
 
-},9999,1);  
+}
 
 /*
 
@@ -37,7 +41,7 @@ add_filter('WPBC_group_builder__layout', function($fields){
 add_filter('wpbc/filter/acf/builder/flexible_content/layouts', function($layouts){ 
 	//unset($layouts['layout_template_part_row']); 
 	//unset($layouts['layout_widgets_row']); 
-	//unset($layouts['layout_navbar_row']); 
+	unset($layouts['layout_navbar_row']); 
 	//unset($layouts['layout_flexible_row']); 
 	// $layouts = array(); 
 	return $layouts; 

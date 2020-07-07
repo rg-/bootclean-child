@@ -88,6 +88,16 @@ add_filter('wpbc/filter/layout/locations', function($locations){
 	return $locations;  
 }, 20, 1 ); 
 
+add_filter('wpbc/filter/layout/location', function($layout, $template, $using_theme_settings, $using_page_settings){
+	if($template == 'page'){
+		//$layout = 'a2-ml';
+		if( is_account_page() || is_cart() || is_checkout() ){
+			$layout = 'a1';
+		}
+	}
+	return $layout;
+},10,4);
+
 /*
 
 	Add a collapsable mini cart
