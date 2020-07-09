@@ -34,30 +34,31 @@
 	Define the allowed roles to use
 	Defaults are "administrator" and "subscriber"
 
+	Ej:
+
+	$default_allowed_roles = array(
+		'administrator',
+		'subscriber'
+	);
+
 */
-add_filter( 'WPBC/filter/private_areas/allowed_roles', function($allowed_roles){
+// This will run first of all, use it to define initial theme setup values
+add_filter( 'WPBC/filter/private_areas/default_allowed_roles', function($allowed_roles){
 	return $allowed_roles;
 },10,1); 
 
-/*
-	Some usefull re-usable function
-	Since we are using Type 1 that is entire website private, but not this pages
-*/
-function WPBC_child_bypass_private(){
-	$post_type = get_post_type();
-	if( is_account_page() || is_cart() || is_checkout() || is_product() || is_shop() || $post_type == 'product' || is_product_category() ){
-		return true;
-	} 
-}
+// This will run last, use it on theme/template conditionals if needed far away the settings used.
+// For example here you can do something like if_is_page()... and allow anyway some other user role.
+add_filter( 'WPBC/filter/private_areas/allowed_roles', function($allowed_roles){
+	return $allowed_roles;
+},10,1);  
 
 /*
-	Bypass the private zone by..
+	Bypass the private zone by.. here you can condition like if is_page('some-page')
 */
 add_filter( 'WPBC/filter/private_areas/bypass', function($bypass,$url){ 
-	$post_type = get_post_type();
-	if( WPBC_child_bypass_private() ){
-		return true;
-	} 
+	// default $bypass = false;
+	return $bypass;
 },10,2);
 
 
@@ -68,11 +69,11 @@ add_filter( 'WPBC/filter/private_areas/redirect_url', function($redirect_url, $u
 	/*
 	default $redirect_url = wp_login_url();
 	*/
-	$redirect_url = get_permalink( wc_get_page_id( 'myaccount' ) );
+	// $redirect_url = get_permalink( wc_get_page_id( 'myaccount' ) );
 	return $redirect_url;
 },10,2);
 /*
-	Redirect users to this page if not allowed and not logged
+	Redirect users to this page if not allowed and not logged (defaults is last visited url )
 */
 add_filter( 'WPBC/filter/private_areas/redirect_login_url', function($redirect_login_url){
 	/*
@@ -80,21 +81,14 @@ add_filter( 'WPBC/filter/private_areas/redirect_login_url', function($redirect_l
 	*/ 
 	return $redirect_login_url;
 },10,2);
-
-/* If woocommerce, need this too */
-
-add_filter('WPBC/filter/woocommerce/login_redirect', function ($login_redirect){
-	if(isset($_GET['private'])){
-		$login_redirect = $_GET['private'];
-	}
-	return $login_redirect;
-},10,1);
+ 
 
 /*
 	
 	Show mesages on front-end depending on user allowed or not ?
 
 */
+	// Should go to core ?
 add_filter( 'WPBC/filter/private_areas/show_alerts', function($show_alerts){
 	return $show_alerts;
-},10,1); 
+},10,1);  
