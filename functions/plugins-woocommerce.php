@@ -177,6 +177,6 @@ function WPBC_woocommerce_account_content(){
 	<header class="woocommerce-products-header">
 			<h1 class="woocommerce-products-header__title page-title">Mi Cuenta</h1>
 	</header>
-	<h2 class="section-title"><?php echo $text; ?></h2>
+	<?php if(!empty($text)){ ?><h2 class="section-title"><?php echo $text; ?></h2><?php } ?>
 	<?php
 }

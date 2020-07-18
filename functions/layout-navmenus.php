@@ -7,7 +7,6 @@
 */
 	
 add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
- 
 	
 	$args['class'] = 'navbar navbar-expand-aside collapse-left navbar-expand-lg'; 
 	$args['nav_attrs'] = ' data-affix-removeclass="" data-affix-addclass="bg-white shadow" ';

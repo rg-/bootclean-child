@@ -1,6 +1,12 @@
 <?php 
 
 /*
+	
+	##################################################
+
+	IMPORTANT, all this things can be done directly on admin settings page "PRIVATE AREAS"
+
+	##################################################
 
 	This is de basic description in this scenario settings
 

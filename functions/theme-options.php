@@ -2,6 +2,16 @@
 
 /*
 
+	Show hide ACF front end form 
+
+*/
+
+add_filter('wpbc/filter/acf/enable_acf_form',function(){
+	return false; // false default
+}, 10, 1);
+
+/*
+
 	Show hide WPBC Theme Options back end
 
 */
