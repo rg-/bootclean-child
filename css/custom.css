@@ -5670,28 +5670,30 @@ span.wpcf7-not-valid-tip {
 */
 .collapse-custom {
   position: fixed;
-  top: 0;
   max-width: 100%;
-  bottom: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 1040;
   display: flex;
   justify-content: space-between;
   width: 300px;
+  min-width: auto;
   background-color: #fff;
-  right: 0;
-  -webkit-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  transform: translate(100%, 0);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  transition: 0.3s all ease 0.13s; }
+  transition: 0.3s all ease 0.13s;
+  /* Positions and transitions */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0); }
   .collapse-custom .collapse-custom-wrapper {
     padding: 38px; }
   .collapse-custom .collapse-custom-animate {
     position: relative;
-    right: -100px;
     transition: 0.3s all ease 0.13s; }
     @media (prefers-reduced-motion: reduce) {
       .collapse-custom .collapse-custom-animate {
@@ -5700,9 +5702,6 @@ span.wpcf7-not-valid-tip {
     .collapse-custom {
       transition: none; } }
   .collapse-custom.opened {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
     transition: 0.5s all ease;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -5710,12 +5709,70 @@ span.wpcf7-not-valid-tip {
     @media (prefers-reduced-motion: reduce) {
       .collapse-custom.opened {
         transition: none; } }
+  .collapse-custom .navbar-nav .nav-link {
+    color: #DD6E42; }
+  .collapse-custom.collapse-custom-full {
+    left: 0;
+    right: 0;
+    width: auto; }
+  .collapse-custom .collapse-custom-animate {
+    right: -100px; }
+  .collapse-custom.opened {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0); }
     .collapse-custom.opened .collapse-custom-animate {
-      right: 0;
-      transition: 0.5s all ease; }
+      right: 0; }
+  .collapse-custom.collapse-custom-left {
+    right: inherit;
+    left: 0;
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0); }
+    .collapse-custom.collapse-custom-left.opened {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0); }
+      .collapse-custom.collapse-custom-left.opened .collapse-custom-animate {
+        right: inherit;
+        left: 0; }
+  .collapse-custom.collapse-custom-top {
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%); }
+    .collapse-custom.collapse-custom-top .collapse-custom-animate {
+      right: inherit;
+      left: inherit; }
+    .collapse-custom.collapse-custom-top.opened {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0); }
+  .collapse-custom.collapse-custom-3d .collapse-custom-animateX {
+    perspective: 300px;
+    overflow: hidden; }
+    .collapse-custom.collapse-custom-3d .collapse-custom-animateX > div {
+      overflow: hidden;
+      transition: 1.3s all ease 2.13s;
+      transform: rotateX(60deg) rotateZ(0deg) rotateY(0deg);
+      transform-style: preserve-3d; }
       @media (prefers-reduced-motion: reduce) {
-        .collapse-custom.opened .collapse-custom-animate {
+        .collapse-custom.collapse-custom-3d .collapse-custom-animateX > div {
           transition: none; } }
+  .collapse-custom.collapse-custom-3d .nav-item {
+    perspective: 300px;
+    overflow: hidden; }
+    .collapse-custom.collapse-custom-3d .nav-item .nav-link {
+      overflow: hidden;
+      transition: 0.3s all ease 0.13s;
+      transform: rotateX(60deg) rotateZ(0deg) rotateY(0deg);
+      transform-style: preserve-3d; }
+      @media (prefers-reduced-motion: reduce) {
+        .collapse-custom.collapse-custom-3d .nav-item .nav-link {
+          transition: none; } }
+  .collapse-custom.collapse-custom-3d.opened .collapse-custom-animateX > div {
+    transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg); }
+  .collapse-custom.collapse-custom-3d.opened .nav-item .nav-link {
+    transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg); }
 
 /* Best way is to use inside navbar like */
 .navbar-expand .collapse-custom {
@@ -6092,6 +6149,7 @@ body.detect-scroll.scrolling .navbar[data-affix-scrollify="1"].scrollifing.affix
       width: 26px;
       height: 4px;
       background-color: #fff;
+      border-radius: 0;
       display: block; }
     .navbar-toggler.animate .navbar-toggler-icon:after {
       margin-top: 8px; }

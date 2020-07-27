@@ -27,7 +27,7 @@
  * @subpackage Enable "swup" addon
  */
 
-	add_filter('wpbc/filter/swup/installed', '__return_true');
+	// add_filter('wpbc/filter/swup/installed', '__return_true');
 	// include('functions/addon-swup.php');
 
 /* ################################################################################## */
@@ -74,6 +74,7 @@ if( class_exists( 'WooCommerce' ) ){
 
 /* ################################################################################## */
 
+include('functions/template-landing.php');
 
 /* ################################################################################## */
 
