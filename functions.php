@@ -36,7 +36,7 @@
  * @subpackage Enable "private_areas" addon
  */
 
-	// add_filter('wpbc/filter/private_areas/installed', '__return_true');
+	add_filter('wpbc/filter/private_areas/installed', '__return_true');
 	// include('functions/addon-private_areas.php');
 
 /* ################################################################################## */
@@ -46,7 +46,9 @@
  */
 
 	include('functions/theme-textdomain.php'); 
-	// include('functions/theme-options.php');
+	include('functions/theme-login.php'); 
+	include('functions/theme-options.php');
+	include('functions/theme-under-construction.php'); 
 	// include('functions/theme-options-page-settings.php');
 	// include('functions/theme-scripts.php');
 	// include('functions/theme-fonts.php');

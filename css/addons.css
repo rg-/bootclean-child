@@ -3118,6 +3118,40 @@ select.selectpicker {
       left: 0;
       top: 0;
       z-index: 1030; } }
+  [data-toggle="nav-affix"][data-affix-position="fixed-top"][data-affix-breakpoint="xs"] {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030; }
+  @media (min-width: 576px) {
+    [data-toggle="nav-affix"][data-affix-position="fixed-top"][data-affix-breakpoint="sm"] {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 0;
+      z-index: 1030; } }
+  @media (min-width: 768px) {
+    [data-toggle="nav-affix"][data-affix-position="fixed-top"][data-affix-breakpoint="md"] {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 0;
+      z-index: 1030; } }
+  @media (min-width: 992px) {
+    [data-toggle="nav-affix"][data-affix-position="fixed-top"][data-affix-breakpoint="lg"] {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 0;
+      z-index: 1030; } }
+  @media (min-width: 1200px) {
+    [data-toggle="nav-affix"][data-affix-position="fixed-top"][data-affix-breakpoint="xl"] {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 0;
+      z-index: 1030; } }
   [data-toggle="nav-affix"][data-affix-position="bottom"] {
     position: absolute;
     right: 0;
@@ -3264,5 +3298,92 @@ body.use-navbar-better.expand-3d .side-menu .contents {
   @media (prefers-reduced-motion: reduce) {
     body.use-navbar-better.expand-3d .side-menu .contents {
       transition: none; } }
+
+/* < ------------------------------ */
+.wpbc-full-aside-cols {
+  height: auto;
+  position: relative; }
+  .wpbc-full-aside-cols .row-fullside {
+    left: 0;
+    right: 0; }
+  .wpbc-full-aside-cols .row-fullside,
+  .wpbc-full-aside-cols .col-fullside {
+    position: relative;
+    height: auto; }
+    .wpbc-full-aside-cols .row-fullside .image-cover,
+    .wpbc-full-aside-cols .col-fullside .image-cover {
+      background-position: center center; }
+  @media (min-width: 576px) {
+    .wpbc-full-aside-cols.break-sm {
+      height: 100%; }
+      .wpbc-full-aside-cols.break-sm .row-fullside, .wpbc-full-aside-cols.break-sm .col-fullside {
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        top: 0; }
+        .wpbc-full-aside-cols.break-sm .row-fullside .embed-responsive, .wpbc-full-aside-cols.break-sm .col-fullside .embed-responsive {
+          height: 100%; }
+          .wpbc-full-aside-cols.break-sm .row-fullside .embed-responsive::before, .wpbc-full-aside-cols.break-sm .col-fullside .embed-responsive::before {
+            padding-top: 0 !important;
+            display: none; }
+        .wpbc-full-aside-cols.break-sm .row-fullside .embed-responsive-item, .wpbc-full-aside-cols.break-sm .col-fullside .embed-responsive-item {
+          position: relative; } }
+  @media (min-width: 768px) {
+    .wpbc-full-aside-cols.break-md {
+      height: 100%; }
+      .wpbc-full-aside-cols.break-md .row-fullside, .wpbc-full-aside-cols.break-md .col-fullside {
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        top: 0; }
+        .wpbc-full-aside-cols.break-md .row-fullside .embed-responsive, .wpbc-full-aside-cols.break-md .col-fullside .embed-responsive {
+          height: 100%; }
+          .wpbc-full-aside-cols.break-md .row-fullside .embed-responsive::before, .wpbc-full-aside-cols.break-md .col-fullside .embed-responsive::before {
+            padding-top: 0 !important;
+            display: none; }
+        .wpbc-full-aside-cols.break-md .row-fullside .embed-responsive-item, .wpbc-full-aside-cols.break-md .col-fullside .embed-responsive-item {
+          position: relative; } }
+  @media (min-width: 992px) {
+    .wpbc-full-aside-cols.break-lg {
+      height: 100%; }
+      .wpbc-full-aside-cols.break-lg .row-fullside, .wpbc-full-aside-cols.break-lg .col-fullside {
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        top: 0; }
+        .wpbc-full-aside-cols.break-lg .row-fullside .embed-responsive, .wpbc-full-aside-cols.break-lg .col-fullside .embed-responsive {
+          height: 100%; }
+          .wpbc-full-aside-cols.break-lg .row-fullside .embed-responsive::before, .wpbc-full-aside-cols.break-lg .col-fullside .embed-responsive::before {
+            padding-top: 0 !important;
+            display: none; }
+        .wpbc-full-aside-cols.break-lg .row-fullside .embed-responsive-item, .wpbc-full-aside-cols.break-lg .col-fullside .embed-responsive-item {
+          position: relative; } }
+  @media (min-width: 1200px) {
+    .wpbc-full-aside-cols.break-xl {
+      height: 100%; }
+      .wpbc-full-aside-cols.break-xl .row-fullside, .wpbc-full-aside-cols.break-xl .col-fullside {
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        top: 0; }
+        .wpbc-full-aside-cols.break-xl .row-fullside .embed-responsive, .wpbc-full-aside-cols.break-xl .col-fullside .embed-responsive {
+          height: 100%; }
+          .wpbc-full-aside-cols.break-xl .row-fullside .embed-responsive::before, .wpbc-full-aside-cols.break-xl .col-fullside .embed-responsive::before {
+            padding-top: 0 !important;
+            display: none; }
+        .wpbc-full-aside-cols.break-xl .row-fullside .embed-responsive-item, .wpbc-full-aside-cols.break-xl .col-fullside .embed-responsive-item {
+          position: relative; } }
+  .wpbc-full-aside-cols.content-right .col-content {
+    margin-left: auto; }
+  .wpbc-full-aside-cols.content-left .col-fullside {
+    right: 0; }
+  .wpbc-full-aside-cols .embed-responsive-multiple {
+    height: 100%; }
+    .wpbc-full-aside-cols .embed-responsive-multiple .embed-responsive-multiple-item {
+      height: 50%; }
+  .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .slick-list, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .slick-track, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .slick-slide, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .slick-slide > div, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .item, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .item > div, .wpbc-full-aside-cols .embed-responsive-item > .theme-slick-slider.type-background .item-container {
+    height: 100%; }
+
+/* ------------------------------ /> */
 
 /*# sourceMappingURL=addons.css.map */
