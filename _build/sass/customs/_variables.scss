@@ -10,9 +10,13 @@
 
 $grid-gutter-width: 38px !default; 
 
-$btn-border-radius:              2px !default;
-$btn-border-radius-lg:           2px !default;
-$btn-border-radius-sm:           2px !default;
+$border-radius:               0 !default;
+$border-radius-lg:            0 !default;
+$border-radius-sm:            0 !default;
+
+$btn-border-radius:              0 !default;
+$btn-border-radius-lg:           0 !default;
+$btn-border-radius-sm:           0 !default;
 
 $btn-font-size-sm: 1rem * .675 !default;
 

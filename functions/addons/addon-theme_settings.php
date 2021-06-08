@@ -2,12 +2,28 @@
 
 /*
 
-	Show helpers on fields on admin, that is
-	front end function to get the field like 
+	Show helpers on admin fields, that is
+	front end function to get the field like:
+
+		WPBC_get_theme_settings('footer_copyright')
 
 */
 
 add_filter('wpbc/filter/theme_settigs/show_helpers', '__return_true');
+
+
+/*
+
+	Filter arguments for option settings page 
+
+*/
+
+add_filter('wpbc/filter/theme_settings/args',function($args){
+	$args['options_page']['page_title'] = 'CHILD settings';
+	$args['options_page']['menu_title'] = 'CHILD settings';
+	$args['options_page']['icon_url'] = '';
+	return $args;
+},11,1);
 
 
 /*
@@ -21,6 +37,8 @@ add_filter('wpbc/filter/theme_settigs/show_helpers', '__return_true');
 			'fields-footer',
 			'fields-typography',
 			'fields-custom-code',
+
+			'fields-layout' NEW
 
 */ 
 
@@ -37,18 +55,4 @@ add_filter('wpbc/filter/theme_settings/file_path', function($file_path, $key){
 
 	return $file_path;
 
-},10,2);
-
-
-/*
-
-	Filter arguments for option page and default group
-
-*/
-
-add_filter('wpbc/filter/theme_settings/args',function($args){
-	$args['options_page']['page_title'] = 'CHILD settings';
-	$args['options_page']['menu_title'] = 'CHILD settings';
-	$args['options_page']['icon_url'] = '';
-	return $args;
-},11,1);
+},10,2); 

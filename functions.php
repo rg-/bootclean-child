@@ -1,4 +1,6 @@
 <?php
+
+
 /* ################################################################################## */
 /* ################################################################################## */
 /**
@@ -6,82 +8,43 @@
  *
  * @package Bootclean
  * @subpackage Child Theme
+ * @version 12.0.0 (style.css defined)
  * 
  */
 /* ################################################################################## */
-/* ################################################################################## */
+	
+	/** 
+	 * WP Bootclean Addons 
+	 * @subpackage "addons-*"
+	 */
 
-/**
- * @subpackage Enable "theme_settings" options pages
- */
-
-	add_filter('wpbc/filter/theme_settings/installed', '__return_true');
-		
-		/* Customs for theme settings here */
-		
-		include('functions/addon-theme_settings.php');
+		include('functions/addons.php'); 
 
 /* ################################################################################## */
 
-/**
- * @subpackage Enable "swup" addon
- */
+	/** 
+	 * WP Bootclean Layout actions and filters
+	 * @subpackage "layout-*"
+	 */
 
-	// add_filter('wpbc/filter/swup/installed', '__return_true');
-	// include('functions/addon-swup.php');
-
-/* ################################################################################## */
-
-/**
- * @subpackage Enable "private_areas" addon
- */
-
-	add_filter('wpbc/filter/private_areas/installed', '__return_true');
-	// include('functions/addon-private_areas.php');
+		include('functions/layout.php'); 
 
 /* ################################################################################## */
 
-/**
- * @subpackage "theme-*" customs
- */
+	/**
+	 * WP Bootclean Theme customs
+	 * @subpackage "theme-*"
+	 */
 
-	include('functions/theme-textdomain.php'); 
-	include('functions/theme-login.php'); 
-	include('functions/theme-options.php');
-	include('functions/theme-under-construction.php'); 
-	// include('functions/theme-options-page-settings.php');
-	// include('functions/theme-scripts.php');
-	// include('functions/theme-fonts.php');
-	// include('functions/theme-widgets.php');
+		include('functions/theme.php');  
 
-/* ################################################################################## */
+/* ################################################################################## */ 
+	
+	/** 
+	 * WP Bootclean Plugins 
+	 * @subpackage "plugins-*"
+	 */
 
-/* core */
-// include('functions/core-theme_support.php'); 
+		include('functions/plugins.php'); 
 
-/* ################################################################################## */
-
-/* front-end layout */ 
-// include('functions/layout.php');
-// include('functions/layout-navmenus.php');
-
-/* ################################################################################## */
-
-/**
- * @subpackage WooCommerce
- */
-if( class_exists( 'WooCommerce' ) ){
-	include('functions/plugins-woocommerce.php');
-}
-
-/* ################################################################################## */
-
-include('functions/template-landing.php');
-
-/* ################################################################################## */
-
-
-/* ################################################################################## */
-
-
-/* ################################################################################## */
+/* ################################################################################## */ 

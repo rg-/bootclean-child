@@ -1,6 +1,6 @@
 <?php
 
-include('template-landing/functions.php');
+include('addon-template-landing/functions.php');
 
 
 /*

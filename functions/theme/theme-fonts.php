@@ -65,7 +65,7 @@ function wpbc_child_wp_head__fonts() {
 
 /* Embed Font Awesome */
 
-// add_filter('BC_enqueue_scripts__fonts', 'wpbc_child_enqueue_custom_font_awesome'); 
+add_filter('BC_enqueue_scripts__fonts', 'wpbc_child_enqueue_custom_font_awesome'); 
 
 function wpbc_child_enqueue_custom_font_awesome($fonts){ 
 	$fonts['fontawesome-all'] = array( 

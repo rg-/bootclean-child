@@ -4,8 +4,18 @@
 // https://coolors.co/dd6e42-e8dab2-4f6d7a-c0d6df-eaeaea
 //
 
-$primary: #DD6E42 !default;
+$primary: #ce3c50 !default;
 $secondary: #4F6D7A !default;
+
+$body-bg: #ffffff !default;
+$body-color: #212529 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "body-bg":    $body-bg,
+  "body-color":  $body-color
+), $theme-colors);
+
 // stylelint-disable
 
 /*
