@@ -1,5 +1,5 @@
 <div class="container gpt-2">
-	<h2 class="display-3">2 Columns + default</h2>
+	<h2 class="display-3">2 Columns + content-up</h2>
 </div>
 
 <?php  
@@ -9,7 +9,7 @@ $cols = array(
 	// col
 	array(
 
-		'col_type' => 'default',
+		'col_type' => 'content-up',
 
 		'col_side' => 'left',
 		'col_size' => '6',
@@ -20,7 +20,7 @@ $cols = array(
 		'content' => array(
 			'content_class' => 'gpy-2 gpx-1 gpy-lg-4 gpr-lg-4 gmb-lg-2',
 			'content_background_class' => '',
-			'title' => '<h2 class="display-3">default 1.1</h2>',
+			'title' => '<h2 class="display-3">content-up 3.1</h2>',
 			'wysiwyg' => '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
 		),
 		'overlap_content' => array(
@@ -35,7 +35,7 @@ $cols = array(
 	// col
 	array(
 
-		'col_type' => 'default',
+		'col_type' => 'content-up',
 
 		'col_side' => 'right',
 		'col_size' => '6',
@@ -46,7 +46,7 @@ $cols = array(
 		'content' => array(
 			'content_class' => 'gpy-2 gpx-1 gpy-lg-4 gpl-lg-4 gmb-lg-2', 
 			'content_background_class' => 'bg-success', 
-			'title' => '<h2 class="display-3">default 1.2</h2>',
+			'title' => '<h2 class="display-3">content-up 3.2</h2>',
 			'wysiwyg' => '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
 		),
 		'overlap_content' => array(

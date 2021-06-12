@@ -1,4 +1,3 @@
-+function(t){ 
- 
++function(t){     
 
 }(jQuery); 

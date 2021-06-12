@@ -13,14 +13,14 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 
 	$args['container_class'] = 'container gpl-1 gpr-2';
 
-	$args['navbar_brand']['class'] = 'gpy-2 transition';
+	$args['navbar_brand']['class'] = 'gpy-2 ';
 	$args['navbar_brand']['attrs'] = ' data-affix-removeclass="gpy-2" data-affix-addclass="gpy-1" ';  
  
 	$logo = '[WPBC_get_stylesheet_directory_uri]/images/theme/bootclean-logo-color-@2.png';
 	$args['navbar_brand']['title'] = '<img width="220" src="'.$logo.'" alt="Bootclean" data-affix-addclass=""/>';
 
 	// or just site name
-	$args['navbar_brand']['title'] = '<span class="h2 font-weight-300 transition" data-affix-removeclass="h2" data-affix-addclass="h4">Bootclean<span class="d-none d-sm-inline-block text-dark">&nbsp;Framework</span></span>';
+	$args['navbar_brand']['title'] = '<span class="h2 font-weight-300" data-affix-removeclass="h2" data-affix-addclass="h4">Bootclean<span class="d-none d-sm-inline-block text-dark">&nbsp;Framework</span></span>';
 
 	$args['navbar_toggler']['class'] = 'toggler-primary toggler-open-primary';
 	$args['navbar_toggler']['type'] = 'animate';
@@ -48,11 +48,11 @@ add_filter('wpbc/filter/layout/main-navbar/defaults', function($args){
 	$args['affix'] = $affix;
 	
 	$args['affix_defaults']['target'] = '#main-content-wrap'; // #main-content-wrap def
-	$args['affix_defaults']['simulate'] = '#main-content';
+	$args['affix_defaults']['simulate'] = $simulate;
 	$args['affix_defaults']['simulate_target'] = '#main-content';
 	$args['affix_defaults']['breakpoint'] = 'xs';
 	$args['affix_defaults']['scrollify'] = false;  
-  
+  $args['affix_defaults']['position'] = 'fixed-top';
 
 	// $args['nav_attrs'] = ' data-affix-target="#main-content-wrap" '; 
 
