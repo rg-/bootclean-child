@@ -33,7 +33,15 @@ add_filter('wpbc/filter/layout/main_container/args', function($value, $layout, $
 
 },10,3);
 
-add_filter('wpbc/filter/layout/main_container/class', function($class, $layout, $id, $area_name){
+/*
+
+	Filter to change any builder class (not recomended, see other filters behind)
+
+*/
+
+// add_filter('wpbc/filter/layout/main_container/class', 'child_main_container_clases',10,4);
+
+function child_main_container_clases($class, $layout, $id, $area_name){
 
 	if( $layout == 'a1' ){
 		$class .= '';
@@ -70,11 +78,66 @@ add_filter('wpbc/filter/layout/main_container/class', function($class, $layout, 
 		if( $area_name == 'area-2' ){
 			$class = 'col-md-2';
 		}
-	}
+	} 
 
 	return $class;
 
-},10,4);
+}
+
+/*
+	
+	class & attrs by layout ID like 
+	main-continer-areas
+
+*/
+
+add_filter('wpbc/filter/layout/class/?id=main-container-areas', function($class, $structure_id, $key){
+
+	// $class .= ' gpy-2 ';
+
+	return $class;
+	
+},10,3);
+
+add_filter('wpbc/filter/layout/attrs/?id=main-container-areas', function($attrs, $structure_id, $key){
+
+	return $attrs;
+
+},10,3);
+
+/*
+	
+	class & attrs by area-name like 
+	main-continer-areas
+
+*/
+
+add_filter('wpbc/filter/layout/class/?area-name=area-main', function($class, $structure_id, $key){
+	if( $structure_id == 'a2-ml' || $structure_id == 'a2-mr' ){
+		$class = ' col-md-9 ';
+	} 
+	if( $structure_id == 'a3-ml' || $structure_id == 'a3-mr' ){
+		$class = ' col-md-8 ';
+	} 
+	return $class; 
+},10,3);
+
+add_filter('wpbc/filter/layout/class/?area-name=area-1', function($class, $structure_id, $key){
+	if( $structure_id == 'a2-ml' || $structure_id == 'a2-mr' ){
+		$class = ' col-md-3 ';
+	} 
+	if( $structure_id == 'a3-ml' || $structure_id == 'a3-mr' ){
+		$class = ' col-md-2 ';
+	}  
+	return $class; 
+},10,3);
+
+add_filter('wpbc/filter/layout/class/?area-name=area-2', function($class, $structure_id, $key){
+	if( $structure_id == 'a3-ml' || $structure_id == 'a3-mr' ){
+		$class = ' col-md-2 ';
+	}  
+	return $class; 
+},10,3);
 
 /* 
 	

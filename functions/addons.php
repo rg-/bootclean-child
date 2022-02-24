@@ -10,6 +10,9 @@
 		
 		//include('addons/addon-flex_builder.php');
 
+
+  include('addons/addon-flex_builder__typography.php'); 
+
 /* ################################################################################## */
 
 /**
@@ -39,6 +42,15 @@
  */
 	 
 	add_filter('wpbc/filter/is_inview/installed', '__return_true',0,1);
+	add_filter('wpbc/filter/is_inview/init', '__return_true',0,1);
+
+/* ################################################################################## */
+
+/**
+ * @subpackage Enable "imagesloaded" Addon JS
+ */ 
+	 
+	add_filter('wpbc/filter/imagesloaded/installed', '__return_true',0,1); 
 
 /* ################################################################################## */
 

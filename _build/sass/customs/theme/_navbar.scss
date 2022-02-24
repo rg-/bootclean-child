@@ -1,0 +1,44 @@
+
+
+
+/*
+
+	.navbar-toggler
+
+*/
+
+
+.navbar-toggler.animate{ 
+	.custom-toggler{
+		width: 36px;
+		height: 36px;
+	}
+ .navbar-toggler-icon{
+	width: 28px;
+	height: 1px;
+	top: 20px;
+	display: flex;
+	justify-content: flex-end;
+ 	&:after,&:before{
+ 		width: 36px;
+ 		height: 1px;
+ 		@include transition();
+ 	}
+ }
+
+ &.close,
+ &[aria-expanded="true"]{
+ 	.navbar-toggler-icon{
+ 		background-color:transparent!important;
+ 		&:after{
+ 			@include rotate(45deg);
+ 			margin-top: 0;
+ 		}
+ 		&:before{
+ 			@include rotate(-45deg);
+ 			margin-top: 0;
+ 		}
+ 	}
+ }
+
+}

@@ -7,12 +7,26 @@
 // Quickly modify global styling by enabling or disabling optional features.
 @import "variables/options";  
 
+// grid
 
 $grid-gutter-width: 38px !default; 
+
+// border
 
 $border-radius:               0 !default;
 $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
+
+// Links 
+
+$link-color:                              $secondary !default;
+$link-decoration:                         none !default; 
+$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-decoration:                   underline !default;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+// btn
 
 $btn-border-radius:              0 !default;
 $btn-border-radius-lg:           0 !default;
@@ -21,4 +35,48 @@ $btn-border-radius-sm:           0 !default;
 $btn-font-size-sm: 1rem * .675 !default;
 
 // navbar
-@import "variables/navbar";
+
+$navbar-padding-y:0!default;
+$navbar-padding-x:0!default; 
+
+$navbar-brand-padding-y:0!default;
+$navbar-brand-padding-x:0!default;
+
+// breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1278px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1248px
+) !default;
+
+
+// slick
+
+$slick-font-path: "../fonts/wpbc-icons/" !default;
+$slick-font-family: "wpbc-icons" !default;
+$slick-loader-path: "../images/loaders/" !default;
+$slick-arrow-color: white !default;
+$slick-arrow-size: 32px!default;
+$slick-dot-color: white !default;
+$slick-dot-color-active: $slick-dot-color !default;
+    
+    $slick-dot-inverse-color: black !default;
+    $slick-dot-inverse-color-active: black !default;
+
+$slick-prev-character: "\e901" !default;
+$slick-next-character: "\e902" !default;
+$slick-dot-character: "\e92c" !default;
+$slick-dot-size: 14px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;

@@ -6,3 +6,14 @@
 	include('layout/layout-styles.php'); 
 	include('layout/layout-main-navbar.php'); 
 	include('layout/layout-builder.php');  
+	include('layout/layout-breadcrumb.php'); 
+
+	add_filter('wpbc/main-page-header/class', function($class){
+
+		if(is_front_page()){
+			$class .= 'gmb-1';
+		}
+
+		return $class;
+
+	},10,1);

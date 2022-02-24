@@ -1,8 +1,13 @@
 <?php
 
-/* Adding custom google fonts */
+/*
+ *
+ * Adding custom google fonts 
+ *
+ *
+*/
 
-add_filter('WPBC_enqueue_google_fonts', 'wpbc_child_enqueue_google_fonts', 10, 1);
+// add_filter('WPBC_enqueue_google_fonts', 'wpbc_child_enqueue_google_fonts', 10, 1);
 
 function wpbc_child_enqueue_google_fonts($fonts){ 
 
@@ -63,9 +68,14 @@ function wpbc_child_wp_head__fonts() {
 		</style>";
 }  
 
-/* Embed Font Awesome */
+/*
+ *
+ * Embed Font Awesome
+ * enable/disble
+ *
+ */
 
-add_filter('BC_enqueue_scripts__fonts', 'wpbc_child_enqueue_custom_font_awesome'); 
+// add_filter('BC_enqueue_scripts__fonts', 'wpbc_child_enqueue_custom_font_awesome'); 
 
 function wpbc_child_enqueue_custom_font_awesome($fonts){ 
 	$fonts['fontawesome-all'] = array( 

@@ -1,6 +1,19 @@
 <div class="">
 
 	<div class="row">
+		
+		<div class="col-12">
+		
+			<p class="h3 gmt-3 text-secondary">WPBC Icons</p>
+
+			<p>wpbc-caret-down: <span class="wpbc-caret-down"></span></p>
+			<p>wpbc-chevron-down: <span class="wpbc-chevron-down"></span></p>
+
+		</div>
+
+	</div>
+
+	<div class="row">
 
 		<div class="col-md-6 ">
 			<p class="h3 gmt-3 text-secondary">Display</p>

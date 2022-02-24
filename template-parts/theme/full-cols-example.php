@@ -2,70 +2,41 @@
 	<h2 class="display-3">2 Columns + default</h2>
 </div>
 
-<?php  
+<div data-component="wpbc-full-row-fit" class="position-relative">
 
-$cols = array(
+	<div class="container position-relative z-index-10">
 
-	// col
-	array(
+		<div class="row">
 
-		'col_type' => 'default',
+			<div class="col-lg-6 order-1 order-lg-1 position-relative">
 
-		'col_side' => 'left',
-		'col_size' => '6',
-		'col_order' => '1',
-		'col_order_breakpoint' => '1', 
-		'col_class' => 'p-0', 
+				<div class="position-lg-absolute-full">
 
-		'content' => array(
-			'content_class' => 'gpy-2 gpx-1 gpy-lg-4 gpr-lg-4 gmb-lg-2',
-			'content_background_class' => '',
-			'title' => '<h2 class="display-3">default 1.1</h2>',
-			'wysiwyg' => '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		),
-		'overlap_content' => array(
-			'overlap_embed' => '21by9',
-			'overlap_class' => '', 
-			'overlap_images' => array(9,8,7),
-			'overlay_slick_args' => array('dots' => true),
-		),
+					<div class="h-100" data-overlap-breakpoint="lg" data-overlap="margin-left" data-overlap-multiply="-1">
+						<div class="h-100 bg-success">
+							
+							<div class="embed-responsive embed-responsive-down-lg-16by9">
 
-	),
+								<div class="embed-responsive-item"></div>
 
-	// col
-	array(
+							</div>
 
-		'col_type' => 'default',
+						</div>
+					</div>
 
-		'col_side' => 'right',
-		'col_size' => '6',
-		'col_order' => '2',
-		'col_order_breakpoint' => '2', 
-		'col_class' => 'p-0', 
+				</div>
 
-		'content' => array(
-			'content_class' => 'gpy-2 gpx-1 gpy-lg-4 gpl-lg-4 gmb-lg-2', 
-			'content_background_class' => 'bg-success', 
-			'title' => '<h2 class="display-3">default 1.2</h2>',
-			'wysiwyg' => '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		),
-		'overlap_content' => array(
-			'overlap_embed' => '21by9',
-			'overlap_class' => '', 
-			'overlap_images' => array(8,7,9),
-			'overlay_slick_args' => array('dots' => true),
-		),
+			</div>
 
-	),
+			<div class="col-lg-6 order-2 order-lg-2 position-relative">
 
-);
+				<h2 class="display-3">Hello</h2>
+				<p>Something</p>
 
- 
-WPBC_get_full_content_fit( array(
-	'layout_id' => "full-cols",
-	'breakpoint' => "lg", 
-	'layout_class' => 'bg-dark text-white',
-	'cols' => $cols,
-)); 
+			</div>			
 
-?>
+		</div>
+
+	</div>
+
+</div>
